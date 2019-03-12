@@ -1,0 +1,40 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+
+<head>
+    <rel="stylesheet" type="text/css" href="css/main.css" />
+    <meta http-equiv="content-type" content="text/php; charset=utf-8" />
+    <script>
+        //Use https://regexr.com/ to practice regexpressions
+        var dateReg = "\b(\d{1,2}\/){2}\d{4}" + "\b(\d{1,2}\/){2}\d{4}\b"
+        
+        //\b            beginning of a word
+        //(\d\d?\/)     Group of 1 digit and optional 2nd digit with a slash
+        //{2}           Occurs exactly twice
+        //\d\d\d\d\d    Followed by 4 digits (year)    
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            else if(true){
+                alert("");
+            }
+        }
+        
+    </script>
+    <title>Regular Expression Practice</title>
+</head>
+<!--This page is about practicing regular expressions for form validation such as making an account involving first/last names, passwords with no special characters, emails-->
+<body>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="fname">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
