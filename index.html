@@ -15,6 +15,9 @@
         //(\d\d?\/)     Group of 1 digit and optional 2nd digit with a slash
         //{2}           Occurs exactly twice
         //\d\d\d\d\d    Followed by 4 digits (year)    
+        var emailReg = "([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}"
+        //Matches all regular valid addresses where it may contain '.' periods, '_' underscores, '-' hyphens
+        //@ is followed by a domain and a '.'period where it can repeat multiple times for certain regions such as United Kingdom ex: "London_Bridge@yahoo.com.uk"
         function validateForm() {
             var x = document.forms["myForm"]["fname"].value;
             if (x == "") {
